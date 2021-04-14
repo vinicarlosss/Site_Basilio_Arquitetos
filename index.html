@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "sortcut icon" href = "./img/LOGOTIPO.ico" type = "image/x-icon" /> 
     <link rel = "stylesheet" href = "./Style.css">
-   
     <title>Basílio Arquitetos</title>
 
 </head>
@@ -15,29 +14,64 @@
     <section id = "header">
         <div class="header container">
             <div class="nav-bar">
-                <div class="brand">
-                    <a href="#"><img src="./img/LOGOTIPO.svg"></a>
-                </div>
-                <div class="search">
-                    <a href="#"><img src="./img/search.svg"></a>
-                </div>
                 <div class="nav-list">
                     <div class="hamburger"><div class="bar"></div></div>
                     <ul>
-                        <li><a href="#"  data-after="inicio">Início</a></li>
-                        <li><a href="#"  data-after="projetos">Projetos</a></li>
-                        <li><a href="#" data-after="sobre">Sobre</a></li>
-                        <li><a href="#" data-after="contato">Contato</a></li>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
+                </div>
+                <div class="brand">
+                    <a href="#"><img src="./img/LOGOTIPO.svg" ></a>
+                </div>
+
+                <div class="search">
+                    <a href="#"><img src="./img/search.svg" ></a>
                 </div>
             </div>
         </div>
-
     </section>
     <!--End Header-->
-    <!--Começo Destaques-->
+    <!--Começo Slides-->
+    <section id="slideshow">
+        <div class="slidershow">
 
-    <!--Fim Destaques-->
+            <div class="slides">
+                <input type="radio" name = "r" id = "r1" checked>
+                <input type="radio" name = "r" id = "r2">
+                <input type="radio" name = "r" id = "r3">
+                <input type="radio" name = "r" id = "r4">
+                
+                <div class="slide s1">
+                    
+                    <img src="./img/slide1.png" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="./img/slide3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/slide4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/slide4.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="navigation">
+                <label for="r1" class="bar">.</label>
+                <label for="r2" class="bar">.</label>
+                <label for="r3" class="bar">.</label>
+                <label for="r4" class="bar">.</label>
+            </div>
+        </div>
+        </div>
+    </section>
+    </section>
+    <!--Fim Slides-->
+
 <script src="./app.js"></script>
 </body>
 </html>
