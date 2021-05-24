@@ -22,7 +22,7 @@ a{
 	z-index: 1000;
 	left: 0;
 	top: 0;
-	width: 100vw;
+	width: 100%;
 	height: auto;
 
 }
@@ -49,10 +49,8 @@ a{
 
 #header .nav-list ul {
 	list-style: none;
+	width: 5px;
 	position: flex;
-	
-	
-	
 	left: 10px;
 	top: 0;
 	display: flex;
@@ -76,18 +74,21 @@ a{
 	padding: 0 20px;
 }
 /*Termina o cabeçalho*/
+
 /*Começo Slides*/
 
 #slideshow .slidershow{
+	
     width: 100%;
-    height: 600px;
+    height: 800px;
     overflow: hidden;
-	margin-bottom: 10px;
+	
+
 }
 
 #slideshow .navigation{
     position: relative;
-    bottom: 100px;
+    bottom: 70px;
     left: 100%;
     transform: translateX(-50%);
     display: flex;
@@ -95,7 +96,7 @@ a{
 #slideshow .bar{
     display: flex;
     margin: 0 .02em;
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
     text-decoration: none;
     transition: 1.5s;
@@ -115,7 +116,6 @@ input[name="r"]{
     height: 100%;
     display: flex;
 }
-
 #slideshow .slide{
     width: 20%;
     transition: 0.6s;
@@ -124,6 +124,7 @@ input[name="r"]{
 #slideshow .slide img{
     width: 100%;
     height: 100%;
+	object-fit: cover;
 }
 
 #r1:checked ~ .s1{
@@ -144,11 +145,95 @@ input[name="r"]{
 
 /*Fim Slides*/
 
+/* Começa Projetos */
+#Projetos {
+	margin-top: 5px ;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+#Projetos .projeto{
+	margin: 5px;
+}
+#Projetos .projeto h1{
+	position: absolute;
+	font-size: 35px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	left: 17%;
+	top: 85%;
+}
+#Projetos .projeto h2{
+	position: absolute;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	left: 20%;
+	top: 89%;
+}
+#Projetos img{
+	width: 100%;
+	object-fit: cover;
+}
+
+#Projetos2 {
+	margin-top: 5px ;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+#Projetos2 .projeto{
+	margin: 5px;
+}
+#Projetos2 img{
+	width: 100%;
+	object-fit: cover;
+}
+
+#Projetos3 {
+	margin-top: 5px ;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+#Projetos3 .projeto{
+	margin: 5px;
+}
+#Projetos3 img{
+	width: 100%;
+	object-fit: cover;
+}
+
+/*
+#Projetos .projeto1 a{
+	position: absolute;
+	left: 16%;
+	font-size: 35px;
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+	bottom: 100px;
+}
+#Projetos .projeto1 p{
+	position: absolute;
+	left: 19%;
+	font-size: 20px;
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+	bottom: 80px;
+}*/
+
+/* Fim Projetos */
+
 /* Começa Rodapé */
 #rodape{
+	position: relative;
 	background-color:rgba(212, 205, 205, 0.671);
-	margin-top: 10px;
-	bottom: 0px;
+	margin-top: 2px;
+
+	bottom: 0;
 	width: 100%;
 	height: 35px;
 
@@ -159,15 +244,16 @@ input[name="r"]{
 #rodape .rede_social{
 	display: flex;
 }
+#rodape .rede_social  img{
+	margin: 15px;
+	height: 20px;
+}
 /* Termina Rodapé */
-
-
-
 
 /*Responsividade */
 
 @media only screen and (max-width: 1024px){
-
+	/*Caneçalho */
 	#header .nav-bar{
 		display: flex;
 		align-items: center;
@@ -177,11 +263,11 @@ input[name="r"]{
 		max-width: 100%;
 		padding: 0 10px;
 	}
-	
+
 	#header .nav-list ul {
 		list-style: none;
 		position: absolute;
-		background-color: rgb(31, 30, 30);
+		background-color:  rgb(31, 30, 30);
 		width: 100vw;
 		height: 100vh;
 		left: 100%;
@@ -207,11 +293,26 @@ input[name="r"]{
 		padding: 20px;
 		display: block;
 	}
-	
-	
-	
+	#header.nav-list ul a::after {
+		content: attr(data-after);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		color: white;
+		font-size: 13rem;
+		letter-spacing: 50px;
+		z-index: -1;
+		transition: .3s ease letter-spacing;
+	}
+
+	#header .nav-list ul li:hover a::after{
+		transform: translate(-50%, -50%) scale(1);
+		letter-spacing: initial;
+	}
+
 	#header .nav-list ul li:hover a {
-		color: #C0C0C0;
+		color: crimson;
 	}
 	#header .hamburger {
 		height: 60px;
@@ -223,7 +324,15 @@ input[name="r"]{
 		justify-content: center;
 		z-index: 100;
 		cursor: pointer;
-	
+	}
+	#header.hamburger::after{
+		position: absolute;
+		content: '';
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		border: 3px solid white;
+		animation: hamburguer_puls 1s ease infinite;
 	}
 	#header .hamburger .bar {
 		height: 1px;
@@ -255,4 +364,16 @@ input[name="r"]{
 	#header .hamburger.active .bar::after {
 		top: 0;
 	}
+	/*fim cabeçalho */
+
+	/*Slides */
+	#slideshow .slidershow{
+		width: 100%;
+		height: 400px;
+	}
+	/*Fim Slides*/
+	/*Começa Projetos*/
+
+
+	/*Termina Projetos */
 }
