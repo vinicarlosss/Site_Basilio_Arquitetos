@@ -155,22 +155,39 @@ input[name="r"]{
 
 #Projetos .projeto{
 	margin: 5px;
+	
 }
 #Projetos .projeto h1{
-	position: absolute;
+	position: relative;
 	font-size: 35px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
-	left: 17%;
-	top: 85%;
+	left: 30%;
+	top: -85%;
 }
 #Projetos .projeto h2{
-	position: absolute;
+	position: relative;
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
-	left: 20%;
-	top: 89%;
+	left: 35%;
+	top: -85%;
+}
+#Projetos .projeto h3{
+	position: relative;
+	font-size: 35px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	left: 30%;
+	top: -85%;
+}
+#Projetos .projeto h4{
+	position: relative;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	left: 35%;
+	top: -85%;
 }
 #Projetos img{
 	width: 100%;
@@ -207,24 +224,6 @@ input[name="r"]{
 	object-fit: cover;
 }
 
-/*
-#Projetos .projeto1 a{
-	position: absolute;
-	left: 16%;
-	font-size: 35px;
-	color: white;
-	font-family:Arial, Helvetica, sans-serif;
-	bottom: 100px;
-}
-#Projetos .projeto1 p{
-	position: absolute;
-	left: 19%;
-	font-size: 20px;
-	color: white;
-	font-family:Arial, Helvetica, sans-serif;
-	bottom: 80px;
-}*/
-
 /* Fim Projetos */
 
 /* Começa Rodapé */
@@ -252,7 +251,7 @@ input[name="r"]{
 
 /*Responsividade */
 
-@media only screen and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width:1024px) and (max-height:1080px){
 	/*Caneçalho */
 	#header .nav-bar{
 		display: flex;
@@ -374,6 +373,174 @@ input[name="r"]{
 	/*Fim Slides*/
 	/*Começa Projetos*/
 
+	#Projetos img{
+		width: 100%;
+		object-fit: cover;
+	}
+	#Projetos .projeto h1{
+		font-size: 30px;
+		left: 25%;
+		top: -80%;
+		color: white;
+	}
+	#Projetos .projeto h2{
+		font-size: 20px;
+		top: -80%;
+		left: 35%;
+	}
+	#Projetos .projeto h3{
+		font-size: 30px;
+		left: 25%;
+		top: -80%;
+		color: white;
+	}
+	#Projetos .projeto h4{
+		font-size: 20px;
+		top: -80%;
+		left: 35%;
+	}
+
+}
 
 	/*Termina Projetos */
+
+@media only screen and (max-width:768px) and (max-height:1080px){
+
+		/*Caneçalho */
+		#header .nav-bar{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			padding: 0 10px;
+		}
+	
+		#header .nav-list ul {
+			list-style: none;
+			position: absolute;
+			background-color:  rgb(31, 30, 30);
+			width: 100vw;
+			height: 100vh;
+			left: 100%;
+			top: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;		overflow-x: hidden;
+			transition: .5s ease left;
+		}
+		
+		#header .nav-list ul.active {
+			left: 0%;
+		}
+		#header .nav-list ul a {
+			font-size: 2.5rem;
+			font-weight: 500;
+			letter-spacing: .2rem;
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			padding: 20px;
+			display: block;
+		}
+		#header.nav-list ul a::after {
+			content: attr(data-after);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			color: white;
+			font-size: 13rem;
+			letter-spacing: 50px;
+			z-index: -1;
+			transition: .3s ease letter-spacing;
+		}
+	
+		#header .nav-list ul li:hover a::after{
+			transform: translate(-50%, -50%) scale(1);
+			letter-spacing: initial;
+		}
+	
+		#header .nav-list ul li:hover a {
+			color: crimson;
+		}
+		#header .hamburger {
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 100;
+			cursor: pointer;
+		}
+		#header.hamburger::after{
+			position: absolute;
+			content: '';
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			border: 3px solid white;
+			animation: hamburguer_puls 1s ease infinite;
+		}
+		#header .hamburger .bar {
+			height: 1px;
+			width: 25px;
+			position: relative;
+			background-color: black;
+			z-index: -1;
+		}
+		#header .hamburger .bar::after,
+		#header .hamburger .bar::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			background-color: black;
+			transition: .3s ease;
+			transition-property: top, bottom;
+		}
+		#header .hamburger .bar::after {
+			top: 8px;
+		}
+		#header .hamburger .bar::before {
+			bottom: 8px;
+		}
+		#header .hamburger.active .bar::before {
+			bottom: 0;
+		}
+		#header .hamburger.active .bar::after {
+			top: 0;
+		}
+		/*fim cabeçalho */
+	
+		/*Slides */
+		#slideshow .slidershow{
+			width: 100%;
+			height: 400px;
+		}
+		/*Fim Slides*/
+		/*Começa Projetos*/
+
+	#Projetos .projeto h1{
+
+		font-size: 20px;
+		color: white;
+		top: -80%;
+		left: 30%;
+
+	}
+	#Projetos .projeto h2{
+
+		font-size: 15px;
+		color: white;
+		top: -80%;
+		left: 35%;
+
+	}
 }
