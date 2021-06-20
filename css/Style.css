@@ -156,6 +156,11 @@ input[name="r"]{
 	margin: 5px;
 }
 
+#projetos .projeto h1{
+	position: relative;
+	bottom: 50px;
+}
+
 #projetos2{
 	margin: 5px;
 	display: flex;
