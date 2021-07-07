@@ -128,6 +128,32 @@ a{
     height: 800px;
     overflow: hidden;
 }
+/*parte de posts da ficha técnica*/
+#post .imagem{
+	position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+	margin-bottom: 20px;
+}
+
+#post .imagem img{
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+#post .imagem h1{
+	position: absolute;
+	font-family: 'Advent Pro', sans-serif;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	bottom: 5%;
+	width: 100%;
+}
+
+/*fim */
 
 #slideshow .navigation{
     position: absolute;
@@ -301,6 +327,77 @@ input[name="r"]{
 
 /* Fim Projetos */
 
+/*Estilizando migalha de pão*/
+#informations ul.breadcrumb{
+	padding: 10px 16px;
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+#informations ul.breadcrumb li{
+	display: inline;
+	font-size: 10px;
+}
+
+#informations ul.breadcrumb li+li:before {
+	padding: 5px;
+	color: gray;
+	content: ">";
+}
+
+#informations ul.breadcrumb li a{
+	color: gray;
+	text-decoration: none;
+}
+
+#informations ul.breadcrumb li a:hover{
+	color: rgb(15, 14, 14);
+	text-decoration: blink;
+}
+/*estilizando informações do post*/
+#informations{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+#informations .informations1{
+	position: relative;
+	width: 100%;
+}
+
+#informations .paragrafo1{
+	font-size: 15px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#informations .paragrafo2{
+	font-size: 15px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#informations .paragrafo3{
+	font-size: 15px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#informations .informations1 .imagem1{
+	width: 100%;
+}
+
+#informations .informations1 .imagem2{
+	width: 100%;
+}
+
+#informations .informations2{
+	position: relative;
+	width: 30%;
+	margin-left: 10px;
+}
+
 /* Começa Rodapé */
 #rodape{
 	position: relative;
@@ -457,6 +554,17 @@ input[name="r"]{
 
 	#slideshow a{
 		bottom: 7%;
+	}
+	#post .imagem{
+		position: relative;
+		width: 100%;
+		height: 400px;
+	}
+	
+	#post .imagem img{
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
 	}
 	/*Fim Slides*/
 	/*Começa Projetos*/
