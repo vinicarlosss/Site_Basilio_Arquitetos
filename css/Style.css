@@ -398,6 +398,32 @@ input[name="r"]{
 	margin-left: 10px;
 }
 
+#informations .informations2 h1{
+	font-size: 20px;
+	color: gray;
+}
+
+#informations .informations2 .informacoes{
+	position: relative;
+	top: 2%;
+}
+
+#informations .informations2 .informacoes p{
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+#informations .informations2 .galeria{
+	margin-top: 8%;
+	grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+	margin-bottom: 2%;
+	color: gray;
+}
+
+#informations .informations2 .img-galeria img{
+	width: 30%;
+}
 /* Começa Rodapé */
 #rodape{
 	position: relative;
@@ -555,6 +581,11 @@ input[name="r"]{
 	#slideshow a{
 		bottom: 7%;
 	}
+	/*estilizando migalha de pão*/
+	#informations .informations1 .breadcrumb a{
+		font-size: 5px;
+	}
+	/*estilizando posts na ficha técnica */
 	#post .imagem{
 		position: relative;
 		width: 100%;
@@ -566,6 +597,19 @@ input[name="r"]{
 		height: 100%;
 		object-fit: fill;
 	}
+
+	#informations .informations1{
+		width: 100%;
+	}
+
+	#informations .informations2{
+		width: 100%;
+	}
+
+	#informations .informations2 .informacoes p{
+		font-size: 9px;
+	}
+
 	/*Fim Slides*/
 	/*Começa Projetos*/
 	#projetos .projeto h1{
