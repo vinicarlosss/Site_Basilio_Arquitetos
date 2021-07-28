@@ -671,6 +671,11 @@ input[name="r"]{
 	}
 	/*Termina Projetos */
 	/*estilizando posts */
+	#informations{
+		display: inline;
+		width: 100%;
+	}
+
 	#informations .informations1{
 		margin-right: 0;
 	}
